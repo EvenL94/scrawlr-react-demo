@@ -7,7 +7,6 @@ const UpvoteButton = ({ isSelected, onButtonToggle }) => {
   return (
     <button
       className={buttonClass}
-      // onClick={onToggle()}
       onClick={onButtonToggle}
     >
       <svg
