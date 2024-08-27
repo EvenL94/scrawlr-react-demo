@@ -1,11 +1,23 @@
 .upvote-button {
-  background-color: #f0f2f5; /* Light gray background */
+  background-color: #f4f6f8;
   border: none;
-  border-radius: 10px; /* Rounded corners */
+  border-radius: 10px;
   width: 40px;
   height: 40px;
   display: flex;
   justify-content: center;
   align-items: center;
   cursor: pointer;
+}
+
+.upvote-button.selected {
+  background-color: #e5e8fd;
+}
+
+.arrow-up {
+  fill: #343a40;
+}
+
+.arrow-up.selected {
+  fill: #253cf2;
 }
