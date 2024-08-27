@@ -1,0 +1,26 @@
+.upvote-list-container {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  border: 1px solid #e2e5e9;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+.upvote-buttons {
+  display: flex;
+  gap: 10px;
+}
+
+.add-button {
+  margin-left: 10px;
+  background-color: #f0f2f5;
+  border: none;
+  border-radius: 10px;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}

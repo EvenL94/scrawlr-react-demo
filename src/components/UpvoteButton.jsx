@@ -1,13 +1,15 @@
-import React, { useState } from "react";
+import React from "react";
 import "./UpvoteButton.css";
 
-const UpvoteButton = ({ handleToggle, toggleSelect }) => {
-  // const [toggleSelect, setToggleSelect] = useState(false);
-
-  const buttonClass = toggleSelect ? "upvote-button selected" : "upvote-button";
-  const arrowClass = toggleSelect ? "arrow-up selected" : "arrow-up";
+const UpvoteButton = ({ isSelected, onButtonToggle }) => {
+  const buttonClass = isSelected ? "upvote-button selected" : "upvote-button";
+  const arrowClass = isSelected ? "arrow-up selected" : "arrow-up";
   return (
-    <button className={buttonClass} onClick={handleToggle}>
+    <button
+      className={buttonClass}
+      // onClick={onToggle()}
+      onClick={onButtonToggle}
+    >
       <svg
         width="24"
         height="24"
