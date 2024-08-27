@@ -1,20 +1,25 @@
 .upvote-list-container {
   display: flex;
+  justify-content: center;
   align-items: center;
+  width: 30%;
+  margin: 0 auto;
   padding: 10px;
-  border: 1px solid #e2e5e9;
-  border-radius: 20px;
   cursor: pointer;
 }
 
-.upvote-buttons {
+.upvote-list {
+  border: 1px solid #e2e5e9;
+  border-radius: 20px;
+  padding: 10px;
   display: flex;
+  flex-wrap: wrap;
   gap: 10px;
+  width: calc(100% - 60px);
 }
 
 .add-button {
-  margin-left: 10px;
-  background-color: #f0f2f5;
+  background-color: #f4f6f8; /* Same as default upvote button */
   border: none;
   border-radius: 10px;
   width: 40px;
@@ -23,4 +28,9 @@
   justify-content: center;
   align-items: center;
   cursor: pointer;
+  margin-left: 20px;
+}
+
+.add-button:hover {
+  background-color: #c1e0ff;
 }

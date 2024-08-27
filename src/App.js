@@ -60,19 +60,35 @@ function App() {
     setLists((prevLists) => [...prevLists, [false]]);
   };
 
+  // Reset to default with on list and one button and refresh the page
+  const handleReset = () => {
+    localStorage.setItem("upvoteLists", JSON.stringify([[false]]));
+    window.location.reload(false);
+  };
+
   return (
     <div className="App">
-      {lists.map((list, index) => (
-        <UpvoteList
-          key={index}
-          listIndex={index}
-          selectedStates={list}
-          onButtonToggle={handleButtonToggle}
-          onListToggle={handleListToggle}
-          onAddButton={handleAddButton}
-        />
-      ))}
-      <button onClick={handleAddList}>Add New List</button>
+      <div className="upvote-lists">
+        <div>
+          <button onClick={handleAddList} className="add-new-list button">
+            Add New List
+          </button>
+          <button onClick={handleReset} className="reset button" >
+            Reset
+          </button>
+        </div>
+
+        {lists.map((list, index) => (
+          <UpvoteList
+            key={index}
+            listIndex={index}
+            selectedStates={list}
+            onButtonToggle={handleButtonToggle}
+            onListToggle={handleListToggle}
+            onAddButton={handleAddButton}
+          />
+        ))}
+      </div>
     </div>
   );
 }
